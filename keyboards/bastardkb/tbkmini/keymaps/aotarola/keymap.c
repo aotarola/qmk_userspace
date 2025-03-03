@@ -24,6 +24,7 @@
 
 enum {
     TD_GUI_GUISPC,
+    TD_GRV_CTRLGRV
 };
 
 #define T_GUI  TD(TD_GUI_GUISPC)  // Tap for Cmd, double tap for Cmd + Space
