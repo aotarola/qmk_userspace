@@ -22,17 +22,16 @@
 #define SPC_L1 LT(1, KC_SPC)
 #define ENT_L2 LT(2, KC_ENT)
 
-#define TAPPING_TERM 175
-#define TAPPING_TERM_PER_KEY
-
-
 enum {
-    TD_ESC_CAPS,
+    TD_GUI_GUISPC,
 };
+
+#define T_GUI  TD(TD_GUI_GUISPC)  // Tap for Cmd, double tap for Cmd + Space
 
 tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
-    [TD_ESC_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS),
+    [TD_GUI_GUISPC]   = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, LGUI(KC_SPC)),
+    
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -45,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
             KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,                          KC_K,    KC_M,    KC_COMM, KC_DOT, SLSH_RCTL, KC_EQL,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-                         TD(TD_ESC_CAPS), KC_LSFT, SPC_L1 ,                       ENT_L2, BSC_SFT,  DEL_ALT
+                                         T_GUI, KC_LSFT, SPC_L1 ,                       ENT_L2, BSC_SFT,  DEL_ALT
                                    //`--------------------------'                    `--------------------------'
 
         ),
