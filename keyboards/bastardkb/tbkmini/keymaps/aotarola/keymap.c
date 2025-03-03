@@ -22,26 +22,18 @@
 #define SPC_L1 LT(1, KC_SPC)
 #define ENT_L2 LT(2, KC_ENT)
 
+#define TAPPING_TERM 175
+#define TAPPING_TERM_PER_KEY
+
 
 enum {
-    TD_LGUI_SPOTLIGHT = 0
+    TD_ESC_CAPS,
 };
 
-// Step 2: Define Tap Dance Behavior
-void dance_lgui_spotlight(qk_tap_dance_state_t *state, void *user_data) {
-    if (state->count == 2) {
-        register_code(KC_LGUI);  // Press LGUI
-        register_code(KC_SPC);   // Press SPC
-        unregister_code(KC_SPC); // Release SPC
-        unregister_code(KC_LGUI); // Release LGUI
-    }
-}
-
-// Step 3: Register Tap Dance Action
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_LGUI_SPOTLIGHT] = ACTION_TAP_DANCE_FN(dance_lgui_spotlight),
+tap_dance_action_t tap_dance_actions[] = {
+    // Tap once for Escape, twice for Caps Lock
+    [TD_ESC_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS),
 };
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -53,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
             KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,                          KC_K,    KC_M,    KC_COMM, KC_DOT, SLSH_RCTL, KC_EQL,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-                         TD(TD_LGUI_SPOTLIGHT), KC_LSFT, SPC_L1 ,                       ENT_L2, BSC_SFT,  DEL_ALT
+                         TD(TD_ESC_CAPS), KC_LSFT, SPC_L1 ,                       ENT_L2, BSC_SFT,  DEL_ALT
                                    //`--------------------------'                    `--------------------------'
 
         ),
