@@ -67,11 +67,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // L2
     [2] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------|.                   |------------------------------------------------------|
-            KC_F7, KC_F8, KC_F9,  KC_LCBR, KC_RCBR, XXXXXXX,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
+            KC_F7, KC_F8, KC_F9,  KC_LCBR, KC_RCBR, XXXXXXX,                      XXXXXXX, KC_HOME, KC_UP,    KC_END, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_F4, KC_F5, KC_F6,  KC_LPRN, KC_RPRN, KC_PIPE,                      KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS, KC_GRV,
+            KC_F4, KC_F5, KC_F6,  KC_LPRN, KC_RPRN, KC_PIPE,                      XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_F1, KC_F2, KC_F3,  KC_LBRC, KC_RBRC, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+            KC_F1, KC_F2, KC_F3,  KC_LBRC, KC_RBRC, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
                                        KC_LGUI, KC_SPC,   MO(3),                       _______, KC_ENT, KC_RALT
                                    //`--------------------------'                    `--------------------------'
