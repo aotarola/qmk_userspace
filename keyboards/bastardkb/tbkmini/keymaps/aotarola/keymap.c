@@ -31,7 +31,6 @@ enum {
 #define T_GRV  TD(TD_GRV_CTRLGRV) // Tap for GRV, double tap for Cmd + GRV
 
 tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for Escape, twice for Caps Lock
     [TD_GUI_GUISPC]   = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, LGUI(KC_SPC)),
     [TD_GRV_CTRLGRV]  = ACTION_TAP_DANCE_DOUBLE(KC_GRV, LGUI(KC_GRV))   
 };
@@ -67,11 +66,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // L2
     [2] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------|.                   |------------------------------------------------------|
-            KC_F7, KC_F8, KC_F9,  KC_LCBR, KC_RCBR, XXXXXXX,                      XXXXXXX, KC_HOME, KC_UP,    KC_END, XXXXXXX, XXXXXXX,
+            KC_F7, KC_F8, KC_F9,  KC_LCBR, KC_RCBR, XXXXXXX,                           XXXXXXX, KC_HOME, KC_UP,    KC_END, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_F4, KC_F5, KC_F6,  KC_LPRN, KC_RPRN, KC_PIPE,                      XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
+            KC_F4, KC_F5, KC_F6,  KC_LPRN, KC_RPRN, KC_PIPE,                           XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_F1, KC_F2, KC_F3,  KC_LBRC, KC_RBRC, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
+            KC_F1, KC_F2, KC_F3,  KC_LBRC, KC_RBRC, XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
                                        KC_LGUI, KC_SPC,   MO(3),                       _______, KC_ENT, KC_RALT
                                    //`--------------------------'                    `--------------------------'
