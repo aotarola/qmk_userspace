@@ -17,6 +17,8 @@
 
 #include QMK_KEYBOARD_H
 #define SLSH_RCTL MT(MOD_RCTL, KC_SLSH)
+#define DEL_ALT MT(MOD_RALT, KC_DEL)
+#define BSC_SFT MT(MOD_RSFT, KC_BSPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -24,11 +26,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //,-----------------------------------------------------|.                   |------------------------------------------------------|
             KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,                          KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSLS,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_LCTL, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                          KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
+            KC_ESC,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                          KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,                          KC_K,    KC_M,    KC_COMM, KC_DOT,  SLSH_RCTL, KC_EQL,
+            KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,                          KC_K,    KC_M,    KC_COMM, KC_DOT, SLSH_RCTL, KC_EQL,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-                                       KC_LGUI, KC_SPC,  MO(1),                         MO(2), KC_ENT,  KC_RALT
+                                       KC_LGUI, KC_SPC,  MO(1),                         MO(2), BSC_SFT,  DEL_ALT
                                    //`--------------------------'                    `--------------------------'
 
         ),
