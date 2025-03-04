@@ -19,6 +19,7 @@
 #define SLSH_RCTL MT(MOD_RCTL, KC_SLSH)
 #define DEL_ALT MT(MOD_RALT, KC_DEL)
 #define BSC_SFT MT(MOD_RSFT, KC_BSPC)
+#define Z_CTL MT(MOD_LCTL, KC_Z)
 #define SPC_L1 LT(1, KC_SPC)
 #define ENT_L2 LT(2, KC_ENT)
 
@@ -43,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
             KC_ESC,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                          KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-            KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,                          KC_K,    KC_M,    KC_COMM, KC_DOT, SLSH_RCTL, KC_EQL,
+            KC_LSFT, Z_CTL,   KC_X,    KC_C,    KC_V,    KC_B,                          KC_K,    KC_M,    KC_COMM, KC_DOT, SLSH_RCTL, KC_EQL,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
                                          T_GUI, KC_LSFT, SPC_L1 ,                       ENT_L2, BSC_SFT,  DEL_ALT
                                    //`--------------------------'                    `--------------------------'
