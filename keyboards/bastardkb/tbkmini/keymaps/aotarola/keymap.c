@@ -23,6 +23,8 @@
 #define SPC_L1 LT(1, KC_SPC)
 #define ENT_L2 LT(2, KC_ENT)
 
+#define TAPPING_TERM 150
+
 enum {
     TD_GUI_GUISPC,
     TD_GRV_CTRLGRV
