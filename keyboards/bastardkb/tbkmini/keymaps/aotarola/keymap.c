@@ -20,7 +20,7 @@
 #define DEL_ALT MT(MOD_RALT, KC_DEL)
 #define BSC_SFT MT(MOD_RSFT, KC_BSPC)
 #define Z_CTL MT(MOD_LCTL, KC_Z)
-#define SPC_L1 LT(1, KC_SPC)
+#define SPC_L1 LT_REPEATKEYS_PLEN(1, KC_SPC, 0)
 #define ENT_L2 LT(2, KC_ENT)
 
 
