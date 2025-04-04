@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
             KC_VOLD, XXXXXXX, XXXXXXX,  KC_F12, XXXXXXX, XXXXXXX,                       XXXXXXX, KC_MUTE, KC_MPLY, KC_MPRV, KC_MNXT, KC_VOLU,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-                                      KC_LGUI,  KC_SPC, _______,                         MO(3), KC_ENT, KC_RALT
+                                      KC_LGUI,  KC_SPC, _______,                         MO(4), KC_ENT, KC_RALT
                                    //`--------------------------'                    `--------------------------'
         ),
 
@@ -74,11 +74,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
             KC_F1, KC_F2, KC_F3,  KC_LBRC, KC_RBRC, XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
-                                       KC_LGUI, KC_SPC,   MO(3),                       _______, KC_ENT, KC_RALT
+                                       KC_LGUI, KC_SPC,   MO(4),                       _______, KC_ENT, KC_RALT
                                    //`--------------------------'                    `--------------------------'
         ),
 
     [3] = LAYOUT_split_3x6_3(
+        //,-----------------------------------------------------|.                   |------------------------------------------------------|
+            XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, RRRRRRR, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
+            XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
+            XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
+                                      XXXXXXX, XXXXXXX,   XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX
+                                   //`--------------------------'                    `--------------------------'
+        ),
+
+    [4] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------|.                   |------------------------------------------------------|
            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+---------|
